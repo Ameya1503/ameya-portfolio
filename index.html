@@ -106,6 +106,83 @@
     .contact-btns a:hover {
       background-color: #444;
     }
+    .certificates a {
+  display: inline-block;
+  margin: 8px 10px;
+  padding: 10px 18px;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid #00bfff;
+  text-decoration: none;
+  color: #00bfff;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+.certificates a:hover {
+  background-color: #00bfff;
+  color: #000;
+}
+#projects {
+  background-color: #111;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.project-card {
+  background: #1a1a1a;
+  border-radius: 15px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 255, 150, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  color: #00ffcc;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.project-card ul {
+  text-align: left;
+  padding-left: 20px;
+  font-size: 0.9rem;
+}
+<style>
+  #typewriter-container {
+    font-size: 1.5rem;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #00ffcc;
+    width: fit-content;
+    margin-top: 1rem;
+  }
+</style>
+
+
   </style>
 </head>
 <body>
@@ -135,21 +212,65 @@
 
   <section id="projects">
     <h2>Projects</h2>
-    <ul>
-      <li>Smart plant watering system</li>
-      <li>Garbage monitoring & separating system</li>
-      <li>ISL-to-English translator using computer vision</li>
-      <li>More in progress</li>
-    </ul>
+    <div class="project-grid">
+  
+      <!-- Smart Plant Watering System -->
+      <div class="project-card">
+        <img src="images/smart-plant-watering.jpg" alt="Smart Plant Watering System" />
+        <h3>🌱 Smart Plant Watering System</h3>
+        <p>A system that automatically waters plants based on soil conditions, built using an Arduino Uno.</p>
+        <ul>
+          <li>Uses a soil moisture sensor to check if the soil is dry.</li>
+          <li>Activates a water pump via relay if moisture is low.</li>
+          <li>Simple, reliable, and ideal for home automation.</li>
+          <li><strong>Application:</strong> Great for busy or elderly plant lovers.</li>
+        </ul>
+      </div>
+  
+      <!-- Garbage Monitoring & Separating System -->
+      <div class="project-card">
+        <img src="images/gargabe monitoring image.webp" alt="Garbage Monitoring and Separating System">
+        <h3>🗑️ Garbage Monitoring & Separating System</h3>
+        <p>An intelligent system for smart waste management using ESP8266.</p>
+        <ul>
+          <li>Weight & level sensors check bin status.</li>
+          <li>Sends Wi-Fi alerts when thresholds are reached.</li>
+          <li>Optional sorting logic for biodegradable waste.</li>
+          <li><strong>Application:</strong> Perfect for public smart bins and city sanitation.</li>
+        </ul>
+      </div>
+  
+      <!-- ISL to English Translator -->
+      <div class="project-card">
+        <img src="images/isl to english pic.jpeg" alt="ISL to English Translator">
+        <h3>🧏‍♂️ ISL-to-English Translator Using Computer Vision</h3>
+        <p>Real-time translator for Indian Sign Language to English using computer vision and ML.</p>
+        <ul>
+          <li>Camera captures hand signs and gestures.</li>
+          <li>ML model (CNN) classifies gestures.</li>
+          <li>Outputs English words or phrases with potential for TTS.</li>
+          <li><strong>Application:</strong> Helps bridge communication for the deaf and hard of hearing.</li>
+        </ul>
+      </div>
+  
+    </div>
   </section>
+  
 
   <section id="certifications">
     <h2>Certifications</h2>
-    <ul class="certificates">
-      <li><a href="certificatematlab onramp.pdf" target="_blank">MATLAB Onramp</a></li>
-      <li><a href="certificatematlab signal processing.pdf" target="_blank">MATLAB Signal Processing</a></li>
-      <li>STM32 Microcontroller Certification (Pending)</li>
-    </ul>
+    <div class="certificates">
+      <a href="certificatematlab onramp.pdf" target="_blank">MATLAB Onramp</a>
+      <a href="certificatematlab signal processing.pdf" target="_blank">Simulink Onramp</a>
+      <a href="#" onclick="return false;" style="cursor: default;">STM32 Microcontroller Certification (Pending)</a>
+      <a href="Teamwork.pdf" target="_blank">Teamwork</a>
+      <a href="Critical.pdf" target="_blank">Critical Thinking</a>
+      <a href="data visual.pdf" target="_blank">Data Visualization</a>
+      <a href="Personal financing.pdf" target="_blank">Personal Financing</a>
+      <a href="Social.pdf" target="_blank">Social Learning</a>
+      <a href="Substainable.pdf" target="_blank">Sustainable Development</a>
+      <a href="SurgeMasters.pdf" target="_blank">SurgeMasters Hackathon</a>
+    </div>
   </section>
   
 
@@ -157,7 +278,6 @@
     <h2>Achievements</h2>
     <ul>
       <li>Led a social service team for village children</li>
-      <li>Founded the hardware coding branch at the codec club</li>
       <li>Completed 2 marathons and 10 treks</li>
       <li>Placed 2nd in a college chess competition</li>
     </ul>
@@ -179,5 +299,41 @@
   <footer>
     <p>© 2025 Ameya Nangle. All rights reserved.</p>
   </footer>
+  <script>
+    const quotes = [
+      '"Chaos is what makes stars explode and minds shine."',
+      '"How you perceive the world shapes how you build in it."'
+    ];
+  
+    let quoteIndex = 0;
+    let charIndex = 0;
+    const speed = 60;
+    const pauseTime = 2000;
+    const target = document.getElementById("typewriter-text");
+  
+    function type() {
+      if (charIndex < quotes[quoteIndex].length) {
+        target.textContent += quotes[quoteIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, speed);
+      } else {
+        setTimeout(erase, pauseTime);
+      }
+    }
+  
+    function erase() {
+      if (charIndex > 0) {
+        target.textContent = quotes[quoteIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, speed / 2);
+      } else {
+        quoteIndex = (quoteIndex + 1) % quotes.length;
+        setTimeout(type, speed);
+      }
+    }
+  
+    document.addEventListener("DOMContentLoaded", type);
+  </script>
+  
 </body>
 </html>
